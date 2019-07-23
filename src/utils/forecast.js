@@ -10,7 +10,8 @@ const forecast = (lat, lng, callback) => {
                     }else{
                             var degree = body.currently.temperature;
                             var rain = body.currently.precipProbability;
-                            callback(undefined, "It is currently " + degree + " outside and there is a " + rain + "% chance of rain");
+                            var moreInfo = body.currently.icon;
+                            callback(undefined, "It is currently " + degree + " outside and there is a " + rain + "% chance of rain \n Generally its a" + moreInfo);
                     }
     })
 }
