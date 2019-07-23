@@ -1,4 +1,30 @@
+download heraku cli
+
 Call git init in root directory
 
 create new file
-.gitignore
+.gitignore add node modules
+
+
+How to connect trough ssh
+open git bash
+run ls -a -l ~/.ssh 
+
+if no files exist
+ssh-keygen -t rsa -b 4096 -C "cehri.alp@gmx.com"
+
+two new files id_rsa -> Keep secret
+and id_rsa.pub 
+
+eval $(ssh-agent -s)  //on mac/lin add " before and after ssh-agent
+
+ssh-add (-K on mac) ~/.ssh/id_rsa
+
+In browser create new repository 
+
+use:
+git remote add origin /url/ call this
+Go to profile on git, settings , ssh and gpg keys -> new ssh key, name it 
+then call "cat ~/.ssh/id_rsa.pub" in POWERSHELL NOT CMD. Copy ssh-rsa til the end of the email and paste key in git site
+now in git bash "ssh -T git@github.com"
+git push -u origin master

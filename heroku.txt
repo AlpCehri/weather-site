@@ -1,0 +1,24 @@
+heroku keys:add
+heroku create cehri-weather-application
+returns 2 links, first one is for the app 
+
+open package.json
+    go to scripts
+    "scripts": {
+        "start": "node src/app.js"
+    }
+
+open app.js
+    at the top define
+     const port = process.env.PORT || 3000
+
+    find "app.listen(port, ()=> {
+
+    })
+
+open app.js in js 
+    find fetch("http://localhost:3000/weather?address=")
+     change to
+     fetch("/weather?address=")
+
+now push to heroku     
