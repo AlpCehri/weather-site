@@ -1,0 +1,4 @@
+Call git init in root directory
+
+create new file
+.gitignore
