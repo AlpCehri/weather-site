@@ -22,3 +22,6 @@ open app.js in js
      fetch("/weather?address=")
 
 now push to heroku     
+git status
+git add .
+git commit -m 
