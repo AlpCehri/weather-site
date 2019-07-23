@@ -25,3 +25,7 @@ now push to heroku
 git status
 git add .
 git commit -m 
+
+
+git remote to see all remotes
+git push heroku master 
